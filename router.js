@@ -1,7 +1,7 @@
 const readBody = require('./lib/readBody')
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-let { postTokens, signature, createToken } = require('./lib/tokens');
+let { postTokens, signature, createToken, findUserByEmail } = require('./lib/tokens');
 const db = require('./db');
 const Router = require('express').Router;
 const router = new Router();

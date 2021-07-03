@@ -11,7 +11,8 @@ let getUserById = (userid) => db.one(`
 
 let getAllPlantData = (userid) => db.query(`
     SELECT * FROM plant_data
-    WHERE userid = ${userid};
+    WHERE userid = ${userid}
+    ORDER BY created DESC;
 `)
 
 let getPlantDataFor = (userid, hours) => {
